@@ -1,0 +1,203 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "What's up",
+        "Is anyone there?"
+      ],
+      "responses": [
+        "Hello, thanks for visiting!",
+        "Hi there, how can I help?",
+        "Hey! What can I do for you today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Catch you later",
+        "Talk to you soon"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you soon — come back again!",
+        "Bye! Thanks for chatting with us."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Appreciate it",
+        "Thanks a lot"
+      ],
+      "responses": [
+        "You're very welcome!",
+        "Happy to help 😊",
+        "Anytime! Glad I could assist."
+      ]
+    },
+    {
+      "tag": "hours",
+      "patterns": [
+        "What are your hours?",
+        "When are you open?",
+        "Opening time",
+        "Closing time",
+        "What time do you open?",
+        "Till when are you open?"
+      ],
+      "responses": [
+        "We're open every day from 9 AM to 9 PM!",
+        "Our restaurant operates from 9 AM to 9 PM daily."
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where are you located?",
+        "What is your address?",
+        "How do I reach your place?",
+        "Where can I find you?",
+        "Location please"
+      ],
+      "responses": [
+        "We’re located at 1000 Bridge Avenue, London EC3N 4AJ, UK.",
+        "You’ll find us on the corner of London Alley and Bridge Avenue."
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you accept credit cards?",
+        "Can I pay with UPI?",
+        "Do you take PayPal?",
+        "Is it cash only?",
+        "Can I pay online?"
+      ],
+      "responses": [
+        "We accept all major credit cards, PayPal, and UPI payments.",
+        "Yes, you can pay by card, cash, or through digital wallets like Paytm and Google Pay."
+      ]
+    },
+    {
+      "tag": "todaysmenu",
+      "patterns": [
+        "What's today's menu?",
+        "What are you serving today?",
+        "What's the special today?",
+        "Any special dishes today?",
+        "What is your menu for today?"
+      ],
+      "responses": [
+        "Today's special is Butter Chicken with Garlic Naan 🥘",
+        "We’re featuring our Chef’s special: Paneer Tikka Masala and Veg Biryani 🍛"
+      ]
+    },
+    {
+      "tag": "deliveryoption",
+      "patterns": [
+        "Do you offer home delivery?",
+        "Can you deliver food?",
+        "Do you provide takeaway or delivery?",
+        "Can I order online?",
+        "Do you deliver through Zomato or Swiggy?"
+      ],
+      "responses": [
+        "Yes, we offer home delivery through Swiggy and Zomato 🚗",
+        "Of course! You can order online via Zomato, Swiggy, or directly from our website."
+      ],
+      "context_set": "food"
+    },
+    {
+      "tag": "menu",
+      "patterns": [
+        "What is on your menu?",
+        "Can I see your menu?",
+        "What kind of food do you serve?",
+        "Do you have vegetarian options?",
+        "Show me the menu"
+      ],
+      "responses": [
+        "You can view our full menu at [www.mymenu.com](http://www.mymenu.com) 🍽️",
+        "We serve North Indian, South Indian, and Continental dishes. You can check the full menu at [www.mymenu.com](http://www.mymenu.com)"
+      ],
+      "context_filter": "food"
+    },
+    {
+      "tag": "reservation",
+      "patterns": [
+        "Can I book a table?",
+        "How can I reserve a table?",
+        "Do I need to make a reservation?",
+        "I'd like to book a table"
+      ],
+      "responses": [
+        "You can reserve a table by calling us at +44 123 456 7890 📞",
+        "Sure! Visit our website and click on the 'Reserve Table' option to book online."
+      ]
+    },
+    {
+      "tag": "feedback",
+      "patterns": [
+        "How can I leave feedback?",
+        "I want to share a review",
+        "Where can I post feedback?",
+        "Can I rate your restaurant?"
+      ],
+      "responses": [
+        "We’d love your feedback! Please visit our feedback page on [www.mymenu.com/feedback](http://www.mymenu.com/feedback).",
+        "Thank you! You can share your review on Google or directly through our website’s feedback form."
+      ]
+    },
+    {
+      "tag": "offers",
+      "patterns": [
+        "Are there any offers?",
+        "Any discounts today?",
+        "Do you have combo deals?",
+        "What are your current promotions?"
+      ],
+      "responses": [
+        "Yes! Get 20% off on online orders above £25.",
+        "We currently offer a free dessert with every family meal combo."
+      ]
+    },
+    {
+      "tag": "covid",
+      "patterns": [
+        "",
+        "Is it safe to dine in?",
+        "Are you following covid safety measures?",
+        "Do staff wear masks?"
+      ],
+      "responses": [
+        "We follow strict COVID-19 protocols — regular sanitization, temperature checks, and masked staff for your safety 😷.",
+        "Yes, your safety is our priority — our restaurant is sanitized hourly, and contactless payment is available."
+      ]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [
+        "qwerty",
+        "asdf",
+        "random",
+        "I don't know"
+      ],
+      "responses": [
+        "I’m not sure I understood that — could you please rephrase?",
+        "Sorry, can you try asking that another way?"
+      ]
+    }
+  ]
+}
