@@ -20,7 +20,7 @@ An intelligent, interactive, full-featured AI Restaurant Assistant powered by **
 ## 🛠️ Tech Stack
 
 - **Backend**: Python 3.10+, Flask, python-dotenv
-- **AI & NLP**: Google Gemini API (`google-generativeai`) with Function Calling & Tool Calling, NLTK, Scikit-learn
+- **AI & NLP**: Google Gemini API (`google-generativeai`) with Function Calling & Tool Calling, Intelligent Local Agent Router
 - **Frontend**: HTML5, Vanilla CSS3 (Glassmorphism + Animations), Modern JavaScript (Fetch API, Web Speech API, SpeechSynthesis)
 - **Data**: Structured JSON / In-memory data store (`menu_data.json`)
 
@@ -34,9 +34,9 @@ Restaurant-Chatbot-Assistant/
 ├── app.py                # Main Flask application & REST API endpoints
 ├── restaurant_agent.py   # AI Agent logic, tool execution & Gemini LLM router
 ├── menu_data.json        # Structured menu items, categories, allergens, promos
-├── intents.json          # Classical intent dataset for training/fallback
-├── requirements.txt      # Python dependencies
+├── requirements.txt      # Clean Python dependencies
 ├── .env.example          # Environment variables template
+├── .gitignore            # Git ignore rules
 └── README.md             # Project documentation
 ```
 
