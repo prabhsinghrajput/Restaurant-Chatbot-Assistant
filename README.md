@@ -1,96 +1,100 @@
-🤖 Restaurant Chatbot Assistant
+# 🍽️ Spice & Savor Bistro - Next-Gen AI Dining Concierge
 
-📌 Project Overview
+An intelligent, interactive, full-featured AI Restaurant Assistant powered by **Python, Flask, Google Gemini LLM with Function Calling / Action Tools**, and a **modern luxury Glassmorphic Web UI**.
 
-Restaurant Chatbot Assistant is an intelligent, interactive web-based chatbot built using Python, Flask, and Machine Learning (NLP).
-It helps restaurant customers quickly get information about menus, offers, delivery, timings, location, reservations, and more.
+---
 
-The chatbot uses TF-IDF + Naive Bayes for intent classification and provides a modern chat UI with quick-access buttons.
+## ✨ Key Features
 
-✨ Key Features
+- 🧠 **Next-Gen AI & Natural Language**: Powered by Google Gemini API with smart fallback. Understands complex dietary requests, dish pairings, and questions.
+- 🥘 **Dynamic Menu Cards**: Rich interactive cards with dietary tags (🌱 Vegan, 🧀 Veg, 🍗 Non-Veg), calories, spice levels, allergens, and **[+ Add to Cart]** buttons.
+- 🛒 **Live Order Cart & Checkout**: Slide-out cart drawer with item quantity counters, coupon code discounts (`SAVE20`, `WELCOME10`), tax & delivery calculation, and checkout.
+- 📅 **Interactive Table Reservation**: Book tables with party size, date, time, and custom requests, generating stylized confirmation tickets (`#RES-XXXX`).
+- 📦 **Real-Time Live Order Tracker**: Visual stepper timeline showing: *Order Confirmed ➔ Cooking in Kitchen ➔ Out for Delivery ➔ Delivered*.
+- 🎙️ **Voice Recognition (Speech-to-Text)**: Speak to the bot naturally using the integrated microphone button.
+- 🔊 **Text-to-Speech (Audio Voice)**: Toggle real-time audio narration of bot responses.
+- 🎨 **Luxury Glassmorphic UI**: Built with modern typography, dark theme with warm amber accents, ambient glow effects, and responsive mobile-first design.
 
-💬 Interactive chatbot UI (HTML, CSS, JavaScript)
-🧠 NLP-based intent classification
-📋 Menu, offers, delivery & reservation queries
-🔄 Context-aware responses
-🎨 Modern animated UI with floating food emojis
-⚡ Fast response using trained ML model
-📱 Fully responsive design
+---
 
-🛠️ Tech Stack
---Backend
+## 🛠️ Tech Stack
 
-Python
-Flask
-Scikit-learn
-NLTK
-Naive Bayes Classifier
-TF-IDF Vectorizer
+- **Backend**: Python 3.10+, Flask, python-dotenv
+- **AI & NLP**: Google Gemini API (`google-generativeai`) with Function Calling & Tool Calling, NLTK, Scikit-learn
+- **Frontend**: HTML5, Vanilla CSS3 (Glassmorphism + Animations), Modern JavaScript (Fetch API, Web Speech API, SpeechSynthesis)
+- **Data**: Structured JSON / In-memory data store (`menu_data.json`)
 
---Frontend
+---
 
-HTML5
-CSS3 (Custom UI)
-JavaScript (Fetch API)
+## 📂 Project Structure
 
-📂 Project Structure
-ChatbotWebApp/
+```
+Restaurant-Chatbot-Assistant/
 │
-├── app.py              # Main Flask application
-├── intents.json        # Training data (intents & responses)
-├── requirements.txt    # Python dependencies
-├── venv/               # Virtual environment (not pushed to GitHub)
-└── README.md
+├── app.py                # Main Flask application & REST API endpoints
+├── restaurant_agent.py   # AI Agent logic, tool execution & Gemini LLM router
+├── menu_data.json        # Structured menu items, categories, allergens, promos
+├── intents.json          # Classical intent dataset for training/fallback
+├── requirements.txt      # Python dependencies
+├── .env.example          # Environment variables template
+└── README.md             # Project documentation
+```
 
-⚙️ How It Works
+---
 
-1.User sends a message via chat UI
-2.Message is tokenized & stemmed
-3.TF-IDF converts text into vectors
-4.Naive Bayes predicts the intent
-5.Bot selects a suitable response
-6.Context is maintained using Flask sessions
+## 🚀 Installation & Quick Start
 
-🚀 Installation & Run
-1️⃣ Clone Repository
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/YOUR_USERNAME/restaurant-chatbot-assistant.git
 cd restaurant-chatbot-assistant
+```
 
-2️⃣ Create Virtual Environment
+### 2️⃣ Create & Activate Virtual Environment
+```bash
+# Windows
 python -m venv venv
-venv\Scripts\activate   # Windows
+.\venv\Scripts\Activate.ps1
+# or: venv\Scripts\activate.bat
+```
 
-3️⃣ Install Dependencies
+### 3️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
-4️⃣ Run Application
+### 4️⃣ (Optional) Configure Gemini API Key
+Create a `.env` file from the example:
+```bash
+cp .env.example .env
+```
+Add your Gemini API key in `.env`:
+```env
+GEMINI_API_KEY=your_actual_gemini_api_key_here
+```
+> **Note:** If you do not provide an API key, the chatbot will automatically run with its built-in **Intelligent Local Agent Engine** so all booking, cart, filtering, and tracking tools work immediately out of the box!
+
+### 5️⃣ Run Application
+```bash
 python app.py
+```
 
-5️⃣ Open in Browser
-http://127.0.0.1:5000
+### 6️⃣ Open in Browser
+Visit **[http://127.0.0.1:5000](http://127.0.0.1:5000)** in your browser.
 
-📸 Screenshots
+---
 
-Interactive chatbot UI with quick menu buttons and animated background
+## 🧪 Interactive Chat Examples to Try
 
-<img width="1920" height="1200" alt="Screenshot (467)" src="https://github.com/user-attachments/assets/ad359cb7-0b96-4cd4-a87a-fc928d5be1c5" />
+- *"Show me today's Chef Specials"*
+- *"What vegan dishes do you have?"*
+- *"Show vegetarian dishes under £12"*
+- *"I want to book a table for 4 tonight at 8 PM under John"*
+- *"What active discount coupons do you have?"*
+- *"Track order #1042"*
+- Click on any dish card's **+ Add** button, open the Cart drawer, apply code `SAVE20`, and complete checkout!
 
-📈 Future Improvements
+---
 
-🔐 User authentication
-🧾 Order placement support
-🗄️ Database integration
-🌍 Multi-language support
-☁️ Cloud deployment (Render / Railway / AWS)
-
-📜 License
-
-This project is developed for educational and demonstration purposes.
-Feel free to modify and enhance it.
-
-👨‍💻 Developer
-
-Prabhjot Singh
-Python | Flask | Machine Learning | NLP
-
-⭐ If you like this project, don’t forget to star the repository!
+## 📜 License
+This project is open-source and free for educational and demonstration purposes.
